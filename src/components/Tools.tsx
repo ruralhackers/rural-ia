@@ -50,9 +50,16 @@ const Tools = () => {
               </h3>
               <ul className="space-y-3">
                 {tool.items.map((item, itemIndex) => (
-                  <li key={itemIndex} className="text-2xl font-bold">
+                  <motion.li
+                    key={itemIndex}
+                    className="text-2xl font-bold cursor-pointer"
+                    whileHover={{
+                      x: [0, -2, 2, -2, 2, 0],
+                      transition: { duration: 0.4 }
+                    }}
+                  >
                     {item}
-                  </li>
+                  </motion.li>
                 ))}
               </ul>
             </motion.div>

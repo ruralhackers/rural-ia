@@ -40,8 +40,10 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
-          <Button size="lg" className="text-lg px-8 py-6 rounded-none">
-            Inscríbete Agora
+          <Button size="lg" className="text-lg px-8 py-6 rounded-none" asChild>
+            <a href="https://forms.gle/65nJ3P8x3azdiem9A" target="_blank" rel="noopener noreferrer">
+              Inscríbete Agora
+            </a>
           </Button>
           <p className="text-sm text-muted-foreground">
             28 Nov - 1 Dec · Anceu Coliving · 15 prazas
