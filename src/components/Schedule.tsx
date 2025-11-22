@@ -21,7 +21,7 @@ interface TimeSlot {
 const scheduleData: TimeSlot[] = [
   {
     time: "08:30-09:30",
-    label: "Almorzo",
+    label: "Mañá",
     day0: "Chegadas",
     day1: "Almorzo",
     day2: "Almorzo",
