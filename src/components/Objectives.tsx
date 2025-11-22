@@ -3,13 +3,13 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 
 const objectives = [
-  "Aprender ferramentas IA actuais para crear, organizarse e automatizar",
-  "Crear unha web ou prototipo funcional en poucas horas",
+  "Aprender ferramentas IA para crear, organizarse e automatizar",
+  "Crear unha web en poucas horas",
   "Mellorar produtividade persoal e profesional con IA",
-  "Xerar imaxes e vídeos creativos para proxectos propios",
+  "Xerar imaxes e vídeos creativos",
   "Construír automatizacións sen código",
   "Desenvolver habilidades brandas: comunicación, colaboración, resolución creativa",
-  "Conectar e convivir en Anceu Coliving",
+  "Conectar e convivir en comunidade",
   "Descubrir o rural como espazo tecnolóxico e creativo",
 ];
 

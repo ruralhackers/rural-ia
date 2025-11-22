@@ -37,27 +37,19 @@ const scheduleData: TimeSlot[] = [
     rowspan: 1,
   },
   {
-    time: "",
-    label: "Pausas",
-    day0: "Pausa",
-    day1: "Pausa",
-    day2: "Pausa",
-    day8: "",
-  },
-  {
     time: "11:30-13:00",
     label: "Sesión 2",
     day0: "Aldeas Hackeadas: futuro dixital dende o monte",
     day1: "AI Playground: Dende un Prompt a un Proxecto",
-    day2: "No-Code, No-Drama: que a máquina curre por ti",
+    day2: "",
     day8: "",
   },
   {
     time: "13:00-14:30",
     label: "Xantar",
-    day0: "Xantar Anceu por Se",
-    day1: "Xantar Anceu por Se",
-    day2: "Xantar Anceu por Se",
+    day0: "Xantar colectivo",
+    day1: "Xantar colectivo",
+    day2: "Xantar colectivo",
     day8: "",
   },
   {
@@ -87,9 +79,9 @@ const scheduleData: TimeSlot[] = [
   {
     time: "20:30+",
     label: "Noite",
-    day0: "Noites",
-    day1: "Plans nocturnos en equipo",
-    day2: "Plans nocturnos en equipo",
+    day0: "Noites creativas",
+    day1: "Noites creativas",
+    day2: "Noites creativas",
     day8: "",
   },
 ];
@@ -98,15 +90,15 @@ const days = [
   { id: "day0", title: "Día 0", subtitle: "Ven 28.11" },
   { id: "day1", title: "Día 1", subtitle: "Sáb 29.11" },
   { id: "day2", title: "Día 2", subtitle: "Dom 30.11" },
-  { id: "day8", title: "Día 8", subtitle: "Lun 1.12" },
+  { id: "day8", title: "Día 3", subtitle: "Lun 1.12" },
 ];
 
 // Configuración de rowspans: qué celdas ocupan múltiples filas
 const rowspanConfig: Record<string, Record<number, number>> = {
-  day0: { 0: 2, 5: 2 }, // Chegadas (filas 0-1) y Sesión 3 (filas 5-6) ocupan 2 filas
-  day1: { 5: 2 }, // Sesión 3 ocupa las filas 5 y 6 (14:30-17:30)
-  day2: { 5: 2 }, // Sesión 3 ocupa las filas 5 y 6 (14:30-17:30)
-  day8: { 1: 8 }, // SAÍDAS ocupa desde la fila 1 hasta la 8 (09:30-20:30+)
+  day0: { 0: 2, 4: 2 }, // Chegadas (filas 0-1) y Sesión 3 (filas 4-5) ocupan 2 filas
+  day1: { 4: 2 }, // Sesión 3 ocupa las filas 4 y 5 (14:30-17:30)
+  day2: { 1: 2, 4: 2 }, // Inspiración tech (filas 1-2, 09:30-13:00) y Sesión 3 (filas 4-5) ocupan 2 filas
+  day8: { 1: 7 }, // SAÍDAS ocupa desde la fila 1 hasta la 7 (09:30-20:30+)
 };
 
 const Schedule = () => {
@@ -122,7 +114,7 @@ const Schedule = () => {
           transition={{ duration: 0.8 }}
           className="text-5xl md:text-7xl font-bold mb-20 tracking-tighter"
         >
-          Horarios
+          Axenda
         </motion.h2>
 
         {/* Desktop Table View */}

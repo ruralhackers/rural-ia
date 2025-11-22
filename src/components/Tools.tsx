@@ -5,19 +5,33 @@ import { useRef } from "react";
 const tools = [
   {
     category: "Creación web e deseño asistido",
-    items: ["Bolt", "Lovable", "Trae"],
+    items: [
+      { name: "Bolt", url: "https://bolt.new" },
+      { name: "Lovable", url: "https://lovable.dev" },
+      { name: "Trae", url: "https://trae.ai" },
+    ],
   },
   {
     category: "Produtividade e organización",
-    items: ["Qwen", "Claude", "Deepseek"],
+    items: [
+      { name: "Qwen", url: "https://qwen.ai" },
+      { name: "Claude", url: "https://claude.ai" },
+      { name: "Deepseek", url: "https://deepseek.com" },
+    ],
   },
   {
     category: "Imaxes e vídeo",
-    items: ["Flux", "Kontext"],
+    items: [
+      { name: "Flux", url: "https://flux.ai" },
+      { name: "Kontext", url: "https://kontext.tech" },
+    ],
   },
   {
     category: "Automatización",
-    items: ["N8n", "Zapier"],
+    items: [
+      { name: "N8n", url: "https://n8n.io" },
+      { name: "Zapier", url: "https://zapier.com" },
+    ],
   },
 ];
 
@@ -34,7 +48,7 @@ const Tools = () => {
           transition={{ duration: 0.8 }}
           className="text-5xl md:text-7xl font-bold mb-20 tracking-tighter"
         >
-          Ferramentas que utilizaremos
+          Ferramentas de IA que descubrirás
         </motion.h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           {tools.map((tool, index) => (
@@ -52,13 +66,20 @@ const Tools = () => {
                 {tool.items.map((item, itemIndex) => (
                   <motion.li
                     key={itemIndex}
-                    className="text-2xl font-bold cursor-pointer"
+                    className="text-2xl font-bold"
                     whileHover={{
                       x: [0, -2, 2, -2, 2, 0],
                       transition: { duration: 0.4 }
                     }}
                   >
-                    {item}
+                    <a 
+                      href={item.url} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="hover:text-primary transition-colors"
+                    >
+                      {item.name}
+                    </a>
                   </motion.li>
                 ))}
               </ul>
