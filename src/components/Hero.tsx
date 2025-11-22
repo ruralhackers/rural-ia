@@ -18,14 +18,18 @@ const Hero = () => {
         style={{ y, opacity }}
         className="container mx-auto px-6 text-center z-10"
       >
-        <motion.h1
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-6xl md:text-8xl lg:text-9xl font-bold mb-6 tracking-tighter"
+          className="mb-6 flex justify-center"
         >
-          Rural IA
-        </motion.h1>
+          <img 
+            src="/logo.svg" 
+            alt="Rural IA" 
+            className="w-full max-w-2xl md:max-w-3xl lg:max-w-4xl h-auto"
+          />
+        </motion.div>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

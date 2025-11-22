@@ -34,9 +34,9 @@ const Tools = () => {
           transition={{ duration: 0.8 }}
           className="text-5xl md:text-7xl font-bold mb-20 tracking-tighter"
         >
-          Ferramentas
+          Ferramentas que utilizaremos
         </motion.h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           {tools.map((tool, index) => (
             <motion.div
               key={index}

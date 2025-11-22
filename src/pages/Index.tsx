@@ -1,9 +1,8 @@
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Objectives from "@/components/Objectives";
-import Program from "@/components/Program";
+import Schedule from "@/components/Schedule";
 import Tools from "@/components/Tools";
-import Results from "@/components/Results";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
@@ -13,9 +12,8 @@ const Index = () => {
       <Hero />
       <About />
       <Objectives />
-      <Program />
+      <Schedule />
       <Tools />
-      <Results />
       <CTA />
       <Footer />
     </main>

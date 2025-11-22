@@ -6,7 +6,7 @@ const Footer = () => {
           <div>
             <h3 className="text-2xl font-bold mb-2">Rural IA</h3>
             <p className="text-sm text-muted-foreground">
-              Anceu Coliving · Ponte Caldelas, Galicia
+              Rural Hackers ·Anceu Coliving · Ponte Caldelas, Galicia
             </p>
           </div>
           <div className="text-center md:text-right">
@@ -14,7 +14,7 @@ const Footer = () => {
               28 Novembro - 1 Decembro
             </p>
             <p className="text-sm text-muted-foreground">
-              © 2024 Rural IA. Todos os dereitos reservados.
+              © {new Date().getFullYear()} Rural IA. Feito con ❤️ por <a href="https://ruralhackers.com" target="_blank" rel="noopener noreferrer" className="text-foreground hover:underline">Rural Hackers</a>
             </p>
           </div>
         </div>
