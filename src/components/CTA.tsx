@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Button } from "@/components/ui/button";
+import { trackFormButtonClick } from "@/lib/analytics";
 
 const CTA = () => {
   const ref = useRef(null);
@@ -25,7 +26,12 @@ const CTA = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Button size="lg" variant="secondary" className="text-lg px-8 py-6 rounded-none" asChild>
-              <a href="https://forms.gle/65nJ3P8x3azdiem9A" target="_blank" rel="noopener noreferrer">
+              <a 
+                href="https://forms.gle/65nJ3P8x3azdiem9A" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                onClick={() => trackFormButtonClick("Solicita a túa praza - CTA")}
+              >
                 Solicita a túa praza
               </a>
             </Button>

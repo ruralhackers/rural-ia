@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import { trackMapsLinkClick } from "@/lib/analytics";
 
 const About = () => {
   const ref = useRef(null);
@@ -82,6 +83,7 @@ const About = () => {
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="underline hover:text-foreground transition-colors"
+                  onClick={() => trackMapsLinkClick("Anceu Coliving")}
                 >
                   Anceu Coliving, Anceu, Galicia
                 </a>

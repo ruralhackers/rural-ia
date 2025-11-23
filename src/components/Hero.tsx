@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { Button } from "@/components/ui/button";
+import { trackFormButtonClick } from "@/lib/analytics";
 
 const Hero = () => {
   const ref = useRef(null);
@@ -45,7 +46,12 @@ const Hero = () => {
           className="flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
           <Button size="lg" className="text-lg px-8 py-6 rounded-none" asChild>
-            <a href="https://forms.gle/65nJ3P8x3azdiem9A" target="_blank" rel="noopener noreferrer">
+            <a 
+              href="https://forms.gle/65nJ3P8x3azdiem9A" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              onClick={() => trackFormButtonClick("Inscríbete Agora - Hero")}
+            >
               Inscríbete Agora
             </a>
           </Button>
