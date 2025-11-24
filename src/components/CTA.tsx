@@ -25,7 +25,7 @@ const CTA = () => {
             podes traballar desde calquera sitio —incluída unha aldea como Anceu.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <Button size="lg" variant="secondary" className="text-lg px-8 py-6 rounded-none" asChild>
+            <Button size="lg" variant="secondary" className="text-lg px-8 py-6 rounded-none bg-[#d45c9d] hover:bg-[#014a9b] text-background" asChild>
               <a 
                 href="https://forms.gle/65nJ3P8x3azdiem9A" 
                 target="_blank" 

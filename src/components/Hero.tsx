@@ -55,7 +55,7 @@ const Hero = () => {
               Inscríbete Agora
             </a>
           </Button>
-          <p className="text-sm text-muted-foreground">
+          <p className="text-sm">
             28 Nov - 1 Dec · Anceu Coliving · 15 prazas
           </p>
         </motion.div>
