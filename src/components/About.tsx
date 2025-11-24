@@ -19,7 +19,7 @@ const About = () => {
           <h2 className="text-5xl md:text-7xl font-bold mb-12 tracking-tighter text-[#014a9b]">
             Unha inmersión de 3 días
           </h2>
-          <div className="space-y-8 text-lg md:text-xl text-muted-foreground leading-relaxed text-[#014a9b]">
+          <div className="space-y-8 text-lg md:text-xl leading-relaxed text-[#014a9b]">
             <p>
               Rural IA é unha experiencia transformadora en Anceu Coliving para <br /> 
               <strong>15 mozos e mozas menores de 30 anos </strong> <br/>
