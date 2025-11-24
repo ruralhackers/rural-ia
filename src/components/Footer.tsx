@@ -5,7 +5,7 @@ const Footer = () => {
         {/* Partner Logos Section */}
         <div className="mb-8 pb-8 border-b border-border">
           <h3 className="text-center text-lg font-semibold mb-6">
-            Con el apoyo de
+            Co apoio de
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center max-w-6xl mx-auto">
             {/* Column 1: Rural IA logo */}
@@ -17,22 +17,13 @@ const Footer = () => {
               />
             </div>
             
-            {/* Columns 2-3: Partners logos */}
-            <div className="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-              <div className="flex justify-center">
-                <img 
-                  src="/logo-partners.jpeg" 
-                  alt="Partners" 
-                  className="h-16 md:h-20 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
-                />
-              </div>
-              <div className="flex justify-center">
-                <img 
-                  src="/logo-partners-2.jpeg" 
-                  alt="Partners" 
-                  className="h-16 md:h-20 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
-                />
-              </div>
+            {/* Columns 2-3: Partners logos combined */}
+            <div className="md:col-span-2 flex justify-center items-center">
+              <img 
+                src="/partners-combined.jpeg" 
+                alt="Partners" 
+                className="w-full max-w-3xl h-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
+              />
             </div>
           </div>
         </div>
