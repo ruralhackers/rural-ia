@@ -7,22 +7,32 @@ const Footer = () => {
           <h3 className="text-center text-lg font-semibold mb-6 text-muted-foreground">
             Con el apoyo de
           </h3>
-          <div className="flex flex-col items-center gap-6">
-            {/* First row of logos */}
-            <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center max-w-6xl mx-auto">
+            {/* Column 1: Rural IA logo */}
+            <div className="flex justify-center">
               <img 
-                src="/logo-partners.jpeg" 
-                alt="Partners" 
-                className="h-16 md:h-20 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
+                src="/ruralia.png" 
+                alt="Rural IA" 
+                className="h-32 md:h-40 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
               />
             </div>
-            {/* Second row of logos */}
-            <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8">
-              <img 
-                src="/logo-partners-2.jpeg" 
-                alt="Partners" 
-                className="h-16 md:h-20 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
-              />
+            
+            {/* Columns 2-3: Partners logos */}
+            <div className="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+              <div className="flex justify-center">
+                <img 
+                  src="/logo-partners.jpeg" 
+                  alt="Partners" 
+                  className="h-16 md:h-20 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
+                />
+              </div>
+              <div className="flex justify-center">
+                <img 
+                  src="/logo-partners-2.jpeg" 
+                  alt="Partners" 
+                  className="h-16 md:h-20 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
+                />
+              </div>
             </div>
           </div>
         </div>
