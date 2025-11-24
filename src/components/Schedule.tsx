@@ -106,7 +106,7 @@ const Schedule = () => {
   const isInView = useInView(ref, { once: true, amount: 0.1 });
 
   return (
-    <section ref={ref} className="py-32 bg-muted/30">
+    <section ref={ref} className="py-32 bg-muted/30 text-[#014a9b]">
       <div className="container mx-auto px-6">
         <motion.h2
           initial={{ opacity: 0, y: 50 }}
@@ -167,7 +167,7 @@ const Schedule = () => {
                     return (
                       <td 
                         key={day.id}
-                        className={`border border-border p-4 ${cellValue ? 'hover:bg-muted/50 transition-colors' : ''}`}
+                        className={`border border-border p-4 ${cellValue ? 'hover:bg-[#d45c9d]/50 transition-colors' : ''}`}
                         rowSpan={rowspan}
                       >
                         {cellValue}

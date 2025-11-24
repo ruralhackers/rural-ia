@@ -24,11 +24,11 @@ const Objectives = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-5xl md:text-7xl font-bold mb-20 tracking-tighter"
+          className="text-5xl md:text-7xl font-bold mb-20 tracking-tighter text-[#014a9b]"
         >
           Obxectivos
         </motion.h2>
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl">
+        <div className="grid md:grid-cols-2 gap-8 max-w-6xl text-[#014a9b]">
           {objectives.map((objective, index) => (
             <motion.div
               key={index}
@@ -37,7 +37,7 @@ const Objectives = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="flex gap-4 items-start group"
             >
-              <span className="text-4xl font-bold text-muted-foreground/30 group-hover:text-foreground transition-colors">
+              <span className="text-4xl font-bold text-[#014a9b]/30 group-hover:text-[#ede624] transition-colors">
                 {String(index + 1).padStart(2, '0')}
               </span>
               <p className="text-lg pt-2">{objective}</p>

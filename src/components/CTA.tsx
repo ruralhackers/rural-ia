@@ -9,7 +9,7 @@ const CTA = () => {
   const isInView = useInView(ref, { once: true, amount: 0.5 });
 
   return (
-    <section ref={ref} className="py-32 bg-foreground text-background">
+    <section ref={ref} className="py-32 bg-[#19ab9b] text-background">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 50 }}

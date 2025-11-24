@@ -40,7 +40,7 @@ const Tools = () => {
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   return (
-    <section ref={ref} className="py-32 bg-background">
+    <section ref={ref} className="py-32 bg-background text-[#014a9b]">
       <div className="container mx-auto px-6">
         <motion.h2
           initial={{ opacity: 0, y: 50 }}
@@ -57,9 +57,9 @@ const Tools = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="border border-border p-8 hover:border-foreground transition-colors group"
+              className="border border-border p-8 hover:border-[#ede624] transition-colors group"
             >
-              <h3 className="text-sm font-bold uppercase tracking-wider mb-6 text-muted-foreground group-hover:text-foreground transition-colors">
+              <h3 className="text-sm font-bold uppercase tracking-wider mb-6 text-[#014a9b] group-hover:text-[#d45c9d] transition-colors">
                 {tool.category}
               </h3>
               <ul className="space-y-3">

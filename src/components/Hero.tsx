@@ -14,7 +14,7 @@ const Hero = () => {
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   return (
-    <section ref={ref} className="relative h-screen flex items-center justify-center overflow-hidden bg-background">
+    <section ref={ref} className="relative h-screen flex items-center justify-center overflow-hidden bg-background text-[#014a9b]">
       <motion.div
         style={{ y, opacity }}
         className="container mx-auto px-6 text-center z-10"
@@ -26,7 +26,7 @@ const Hero = () => {
           className="mb-6 flex justify-center"
         >
           <img 
-            src="/logo.svg" 
+            src="/logo.jpeg" 
             alt="Rural IA" 
             className="w-full max-w-2xl md:max-w-3xl lg:max-w-4xl h-auto"
           />
@@ -35,7 +35,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-8 max-w-3xl mx-auto font-light"
+          className="text-xl md:text-2xl lg:text-3xl mb-8 max-w-3xl mx-auto font-light"
         >
           Creatividade, Automatización e Futuro Dixital dende o Rural
         </motion.p>
@@ -45,7 +45,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
-          <Button size="lg" className="text-lg px-8 py-6 rounded-none" asChild>
+          <Button size="lg" className="text-lg px-8 py-6 rounded-none bg-[#d45c9d] hover:bg-[#19ab9b] text-background" asChild>
             <a 
               href="https://forms.gle/65nJ3P8x3azdiem9A" 
               target="_blank" 
