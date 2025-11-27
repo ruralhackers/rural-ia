@@ -14,91 +14,98 @@ interface TimeSlot {
   day0?: string;
   day1?: string;
   day2?: string;
-  day8?: string;
+  day3?: string;
+  day4?: string;
   rowspan?: number;
 }
 
 const scheduleData: TimeSlot[] = [
   {
-    time: "08:30-09:30",
-    label: "Mañá",
-    day0: "Chegadas",
+    time: "09:00-10:30",
+    label: "Almorzo",
+    day0: "ARRIVALS",
     day1: "Almorzo",
     day2: "Almorzo",
-    day8: "Almorzo",
+    day3: "Almorzo",
+    day4: "",
   },
   {
-    time: "09:30-11:00",
-    label: "Sesión 1",
-    day0: "",
-    day1: "Rural Talks: Histórias de futuro dende as aldeas",
-    day2: "Inspiración tech dende Portugal",
-    day8: "SAÍDAS",
-    rowspan: 1,
+    time: "10:30-12:30",
+    label: "Sesión de traballo",
+    day0: "ARRIVALS",
+    day1: "Anceu Free Tour: Hackeando o monte",
+    day2: "Inspiración Tech dende Portugal",
+    day3: "",
+    day4: "DEPARTURES",
   },
   {
-    time: "11:30-13:00",
-    label: "Sesión 2",
-    day0: "Aldeas Hackeadas: futuro dixital dende o monte",
-    day1: "AI Playground: Dende un Prompt a un Proxecto",
-    day2: "",
-    day8: "",
+    time: "",
+    label: "Breaks",
+    day0: "Café Benvida/Onboarding",
+    day1: "Break",
+    day2: "Inspiración Tech dende Portugal",
+    day3: "",
+    day4: "",
   },
   {
-    time: "13:00-14:30",
+    time: "12:30-14:00",
+    label: "Sesión de traballo",
+    day0: "Rural Hackers: Transformando aldeas con tecnoloxía",
+    day1: "Xerando imaxes coa IA: Aboas Ciberpunks",
+    day2: "Inspiración Tech dende Portugal",
+    day3: "",
+    day4: "",
+  },
+  {
+    time: "14:00-16:00",
     label: "Xantar",
     day0: "Xantar colectivo",
     day1: "Xantar colectivo",
     day2: "Xantar colectivo",
-    day8: "",
+    day3: "",
+    day4: "",
   },
   {
-    time: "14:30-16:00",
-    label: "Sesión 3",
-    day0: "Avoas Cyberpunks e galiñas mutantes: Xenerando coa IA Xenerativa",
+    time: "16:00-18:00",
+    label: "Sesión de traballo",
+    day0: "AI Playground: Dende un Prompt a un Proxecto",
     day1: "De 'non teño nin idea' a 'mira a miña web' en só unhas horas",
     day2: "No-Code, No-Drama: que a máquina curre por ti",
-    day8: "",
+    day3: "",
+    day4: "",
   },
   {
-    time: "16:30-17:30",
-    label: "Sesión 4",
-    day0: "",
-    day1: "",
-    day2: "",
-    day8: "",
+    time: "18:00-20:30",
+    label: "Tempo colectivo",
+    day0: "Tempo colectivo",
+    day1: "Tempo colectivo",
+    day2: "Tempo colectivo",
+    day3: "",
+    day4: "",
   },
   {
-    time: "19:30",
-    label: "Cea colectiva",
-    day0: "Cea colectiva",
-    day1: "Cea colectiva",
-    day2: "Cea colectiva",
-    day8: "",
-  },
-  {
-    time: "20:30+",
-    label: "Noite",
-    day0: "Noites creativas",
-    day1: "Noites creativas",
-    day2: "Noites creativas",
-    day8: "",
+    time: "20:30-21:30",
+    label: "Cea",
+    day0: "Cea",
+    day1: "Cea",
+    day2: "Cea",
+    day3: "",
+    day4: "",
   },
 ];
 
 const days = [
   { id: "day0", title: "Día 0", subtitle: "Ven 28.11" },
-  { id: "day1", title: "Día 1", subtitle: "Sáb 29.11" },
-  { id: "day2", title: "Día 2", subtitle: "Dom 30.11" },
-  { id: "day8", title: "Día 3", subtitle: "Lun 1.12" },
+  { id: "day1", title: "Día 1", subtitle: "Sab 29.11" },
+  { id: "day2", title: "Day 3", subtitle: "Dom 30.11" },
+  { id: "day3", title: "Día 4", subtitle: "Lun 1.12" },
 ];
 
 // Configuración de rowspans: qué celdas ocupan múltiples filas
 const rowspanConfig: Record<string, Record<number, number>> = {
-  day0: { 0: 2, 4: 2 }, // Chegadas (filas 0-1) y Sesión 3 (filas 4-5) ocupan 2 filas
-  day1: { 4: 2 }, // Sesión 3 ocupa las filas 4 y 5 (14:30-17:30)
-  day2: { 1: 2, 4: 2 }, // Inspiración tech (filas 1-2, 09:30-13:00) y Sesión 3 (filas 4-5) ocupan 2 filas
-  day8: { 1: 7 }, // SAÍDAS ocupa desde la fila 1 hasta la 7 (09:30-20:30+)
+  day0: { 0: 2 }, // ARRIVALS ocupa filas 0-1 (09:00-12:30)
+  day2: { 1: 3 }, // Inspiración Tech dende Portugal ocupa filas 1-3 (10:30-14:00: Sesión 1 + Breaks + Sesión 2)
+  day3: { 1: 7 }, // DEPARTURES ocupa desde la fila 1 hasta la 7 (10:30-21:30)
 };
 
 const Schedule = () => {
